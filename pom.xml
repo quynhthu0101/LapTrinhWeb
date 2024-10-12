@@ -6,7 +6,7 @@
 	<artifactId>BTLR</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
-	<name>BTL&amp;R</name>
+	<name>BTLR</name>
 	<dependencies>
 		<!--
 		https://mvnrepository.com/artifact/jakarta.servlet/jakarta.servlet-api -->
@@ -51,11 +51,7 @@
 			<artifactId>sitemesh</artifactId>
 			<version>3.2.1</version>
 		</dependency>
-		<dependency>
-			<groupId>jstl</groupId>
-			<artifactId>jstl</artifactId>
-			<version>1.2</version>
-		</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
 		<dependency>
 			<groupId>commons-io</groupId>

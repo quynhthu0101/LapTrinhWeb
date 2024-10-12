@@ -1,5 +1,4 @@
-
-;(function($){
+(function($){
   $.fn.markdown.messages['kr'] = {
     'Bold': "진하게",
     'Italic': "이탤릭체",

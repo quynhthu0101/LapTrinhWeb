@@ -74,5 +74,3 @@
 	</div>
 </div>
 <!-- END CONTENT -->
-
-
