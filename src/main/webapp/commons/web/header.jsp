@@ -32,23 +32,21 @@
                 <!-- BEGIN TOP BAR MENU -->
                 <div class="col-md-6 col-sm-6 additional-nav">
                     <ul class="list-unstyled list-inline pull-right">
-                        <li><a href="shop-account.html">My Account</a></li>
-                        <li><a href="shop-wishlist.html">My Wishlist</a></li>
-                        <li><a href="shop-checkout.html">Checkout</a></li>
+                        
                         <li>
 
 <c:choose>
 		<c:when test="${sessionScope.account == null}">
 			
+					
 					<a href="${pageContext.request.contextPath }/login">Đăng
 							nhập</a> | <a href="${pageContext.request.contextPath }/register">Đăng Ký </a>
 					
 			
 		</c:when>
 		<c:otherwise>
-			
-					<a
-						href="${pageContext.request.contextPath}/member/myaccount">${sessionScope.account.fullName}</a>
+					<a href="${pageContext.request.contextPath }/videos">Video</a> | 
+					<a href="${pageContext.request.contextPath}/member/myaccount">${sessionScope.account.username}</a>
 						| <a href="${pageContext.request.contextPath }/logout">Đăng
 							xuất </a>
 							

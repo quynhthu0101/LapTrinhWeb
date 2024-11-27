@@ -5,6 +5,9 @@
 
 <form action= "${pageContext.request.contextPath}/admin/category/insert" method = "post"
 	enctype="multipart/form-data">
+	<label for="fname">Category Code:</label><br> 
+	<input type="text"	id="categorycode" name="categorycode"> <br> 
+	
 	<label for="fname">Category Name:</label><br> 
 	<input type="text"	id="categoryname" name="categoryname"> <br> 
 	
@@ -14,8 +17,11 @@
 		
 		
 		
-	<label	for="status">Status:</label><br> 
-	<input type="text" id="status" name = "status"> <br>
+	<label for="status">Status:</label><br>
+	<input type="radio" id="active" name="status" value="1">
+	<label for="active">Active</label><br>
+	<input type="radio" id="inactive" name="status" value="0">
+	<label for="inactive">Inactive</label><br>
 	
 	<br> <input type = "submit" value = "insert">
 	

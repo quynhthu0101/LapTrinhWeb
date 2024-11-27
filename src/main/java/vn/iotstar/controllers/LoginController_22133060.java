@@ -1,6 +1,7 @@
 package vn.iotstar.controllers;
 
 import java.io.IOException;
+import java.util.List;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -9,14 +10,14 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import vn.iotstar.models.User;
 import vn.iotstar.services.UserService;
-import vn.iotstar.services.imp.UserServiceImpl;
+import vn.iotstar.entity.User_22133060;
+import vn.iotstar.services.IUserService;
 import vn.iotstar.ultis.Constant;
 
 @SuppressWarnings("serial")
 @WebServlet(urlPatterns = "/login")
-public class LoginController extends HttpServlet {
+public class LoginController_22133060 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		HttpSession session = req.getSession(false);
@@ -64,9 +65,9 @@ public class LoginController extends HttpServlet {
 			return;
 		}
 
-		UserService service = new UserServiceImpl();
+		IUserService service = new UserService();
 
-		User user = service.login(username, password);
+		User_22133060 user = service.login(username, password);
 		if (user != null) {
 			HttpSession session = req.getSession(true);
 			session.setAttribute("account", user);

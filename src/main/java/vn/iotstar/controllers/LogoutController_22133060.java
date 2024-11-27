@@ -12,7 +12,7 @@ import jakarta.servlet.http.HttpSession;
 import vn.iotstar.ultis.Constant;
 
 @WebServlet (urlPatterns = "/logout")
-public class LogoutController extends HttpServlet{
+public class LogoutController_22133060 extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 
 	@Override

@@ -9,8 +9,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 
-@WebServlet(urlPatterns = {"/home", "/admin/home"})
-public class HomeController extends HttpServlet{
+@WebServlet(urlPatterns = {"/home", "/admin/home", "/"})
+public class HomeController_22133060 extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

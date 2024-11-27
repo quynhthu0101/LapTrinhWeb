@@ -2,13 +2,25 @@ package vn.iotstar.services;
 
 import java.util.List;
 
-import vn.iotstar.models.CategoryModel;
+import vn.iotstar.entity.Category_22133060;
 
 public interface ICategoryService {
-	List<CategoryModel> findAll();
-	CategoryModel findById(int id);
-	void insert(CategoryModel category);
-	void update(CategoryModel category);
-	void delete(int id);
-	List<CategoryModel> findName(String keyword);
+	void insert(Category_22133060 Category_22133060);
+
+	int count();
+
+	List<Category_22133060> findAll(int offset, int pageSize);
+
+	List<Category_22133060> searchByName(String catname);
+
+	List<Category_22133060> findAll();
+
+	Category_22133060 findById(int cateid);
+
+	void delete(int cateid) throws Exception;
+
+	void update(Category_22133060 Category_22133060);
+	
+	Category_22133060 findFirstCategory();
+
 }

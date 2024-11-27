@@ -9,6 +9,7 @@
 		<th>STT</th>
 		<th>Images</th>
 		<th>CategoryId</th>
+		<th>CategoryCode</th>
 		<th>CategoryName</th>
 		<th>Status</th>
 		<th>Action</th>
@@ -30,8 +31,9 @@
 					<img height="150" width="200" src="${imgUrl}" />
 			
 			</td>
-			<td>${cate.categoryid }</td>
-			<td>${cate.categoryname }</td>
+			<td>${cate.categoryId }</td>
+			<td>${cate.categoryCode }</td>
+			<td>${cate.categoryName }</td>
 			<td>
 				<c:if test="${cate.status == 1}">
 					<span>Hoạt động</span>
@@ -41,12 +43,26 @@
 				</c:if>
 			
 			</td>
-			<td><a
-				href="<c:url value='/admin/category/edit?id=${cate.categoryid }'/>"
-				class="center">Sửa</a> | <a
-				href="<c:url value='/admin/category/delete?id=${cate.categoryid }'/>"
-				class="center">Xóa</a></td>
+			<td>
+				<a href="<c:url value='/admin/category/edit?id=${cate.categoryId }'/>"	class="center"> Sửa</a> |
+				<a href="<c:url value='/admin/category/delete?id=${cate.categoryId }'/>" class="center">Xóa</a> 
+			</td>
 		</tr>
 	</c:forEach>
 
 </table>
+
+<!-- Hiển thị phân trang -->
+<div class="pagination">
+    <c:if test="${currentPage > 1}">
+        <a href="<c:url value='/admin/categories?page=${currentPage - 1}'/>">Previous</a>
+    </c:if>
+
+    <c:forEach begin="1" end="${totalPages}" var="page">
+        <a href="<c:url value='/admin/categories?page=${page}'/>">${page}</a>
+    </c:forEach>
+
+    <c:if test="${currentPage < totalPages}">
+        <a href="<c:url value='/admin/categories?page=${currentPage + 1}'/>">Next</a>
+    </c:if>
+</div>
